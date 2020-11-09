@@ -1,0 +1,960 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    color: rgb(39, 39, 39);
+    /* background-color: rgb(242, 242, 242); */
+}
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 10;
+}
+
+/* Header Section */
+header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #E5E5E5;
+    padding: 0px 15px;
+    z-index: 10;
+}
+
+header.header {
+    background-color: white;
+    position: fixed;
+    animation: headerAnim .5s ease;
+}
+
+@keyframes headerAnim {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
+header .row {
+    justify-content: center;
+    align-items: center;
+}
+
+header .name a {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+    text-transform: uppercase;
+    position: relative;
+}
+
+header .name a::before {
+    content: '';
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+header .navbar {}
+
+header .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header .navbar ul li {
+    display: inline-block;
+    margin-left: 45px;
+}
+
+header .navbar ul li a {
+    font-size: 17px;
+    text-decoration: none;
+    line-height: 72px;
+    color: black;
+    font-weight: 500;
+    position: relative;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header .navbar ul li a::before {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background-color: black;
+    position: absolute;
+    right: 0px;
+    bottom: -1px;
+    transition: all .5s ease;
+}
+
+header .navbar ul li a:hover::before {
+    width: 100%;
+    left: 0%;
+}
+
+header .navbar ul li a.active::before {
+    width: 100%;
+    left: 0%;
+}
+
+/* Home Section */
+.home {
+    min-height: 100vh;
+    padding: 15px;
+    background-color: white;
+}
+
+.home .full-screen {
+    min-height: 100vh;
+
+}
+
+.home .home-content {
+    max-width: 100%;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.home .home-content .block {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 35px;
+    border-left: 5px solid #000;
+}
+
+.home .home-content .image-container {
+    flex: 0 0 50%;
+    max-width: 50%;
+    text-align: center;
+}
+
+.home .home-content .image-container .image-wrapper .my-image {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.home .home-content .block h6 {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.home .home-content .block h1 {
+    font-size: 60px;
+    font-weight: 500;
+    font-family: 'Oswald', sans-serif;
+    line-height: 70px;
+    padding: 0;
+}
+
+.home .home-content .block h3 {
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding-top: 20px;
+    color: #494949;
+}
+
+.home .home-content .block h3 span {
+    font-weight: 600;
+    color: rgb(43, 43, 43);
+}
+
+.home .home-content .block .cv-btn {
+    padding-top: 20px;
+}
+
+.home .home-content .block .cv-btn a {
+    border-radius: 4px;
+    border: 1px solid black;
+    padding: 12px 25px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: black;
+    text-transform: uppercase;
+    transition: all .5s ease;
+    font-weight: 500;
+    background-color: transparent;
+    font-family: 'Oswald', sans-serif;
+}
+
+.home .home-content .block .cv-btn a:hover {
+    background-color: black;
+    color: white;
+}
+
+/* About Me Section */
+.about-me {
+    padding: 100px 15px 50px;
+    background-color: rgb(242, 242, 242);
+}
+
+.about-me .section-title {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+
+.about-me .section-title h1 {
+    font-size: 35px;
+    font-weight: 500;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    font-family: 'Oswald', sans-serif;
+}
+
+.about-me .section-title h1:before {
+    content: '';
+    left: 0px;
+    right: 25%;
+    height: 2px;
+    position: absolute;
+    background-color: black;
+    bottom: 0px;
+}
+
+.about-me .section-title p {
+    display: block;
+}
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+.about-me .section-title p.small {
+    display: block;
+    font-size: 14px;
+    color: #838383;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+
+.about-me .about-content .img {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+}
+
+.about-me .about-content .img img {
+    width: 100%;
+    display: block;
+}
+
+.about-me .about-content .text {
+    flex: 0 0 66.66%;
+    max-width: 66.66%;
+    padding-left: 30px;
+}
+
+.about-me .about-content .text h4 {
+    font-size: 32px;
+    font-weight: 500;
+    margin: 0 0 5px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.about-me .about-content .text h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0 0 8px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.about-me .about-content .text h4 span {
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0 0 8px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.about-me .about-content .text h6 {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0 0 15px;
+    font-family: 'Oswald', sans-serif;
+    color: #6d6d6d;
+}
+
+.about-me .about-content .text p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #6d6d6d;
+    margin: 0 0 20px;
+}
+
+.about-me .about-content .text .info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about-me .about-content .text .info .info-row {
+    display: flex;
+    flex: 0 0 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+    margin-top: 10px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 10px;
+}
+
+.about-me .about-content .text .info .info-row label {
+    padding-right: 10px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.about-me .about-content .text .info .info-row p {
+    margin: 0;
+}
+
+.about-me .about-content .text .social-links {
+    padding-top: 30px;
+}
+
+
+.about-me .about-content .text .social-links a {
+    height: 35px;
+    width: 35px;
+    background-color: black;
+    border-radius: 3px;
+    display: inline-block;
+    border: 1px solid black;
+    line-height: 28px;
+    text-align: center;
+    margin: 0 1px;
+    transition: all .5s ease;
+}
+
+.about-me .about-content .text .social-links a:hover {
+    background-color: transparent;
+}
+
+.about-me .about-content .text .social-links a .fa {
+    color: white;
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 14px;
+    transition: all .5s ease;
+}
+
+.about-me .about-content .text .social-links a:hover .fa {
+    color: black;
+}
+
+/* Skills Section */
+.skills {
+    padding: 100px 15px 70px;
+    background-color: rgb(242, 242, 242);
+}
+
+.skills .section-title {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 0px;
+}
+
+.skills .section-title h1 {
+    font-size: 35px;
+    font-weight: 700;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+}
+
+.skills .section-title h1:before {
+    content: '';
+    left: 0px;
+    right: 25%;
+    height: 2px;
+    position: absolute;
+    background-color: black;
+    bottom: 0px;
+}
+
+.skills .section-title p {
+    display: block;
+}
+
+.skills .section-title p.small {
+    display: block;
+    font-size: 14px;
+    color: #838383;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.skills .skills-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skills .skills-content .box {
+    background-color: white;
+    border: 2px solid white;
+    flex: 0 0 calc(29% - 15px);
+    max-width: calc(29% - 15px);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0.4rem 0.4rem 0.4rem rgba(46, 41, 78, .15);
+    transition: transform .3s;
+    text-align: center;
+    margin: 10px 0 0;
+    height: 400px;
+}
+
+.skills .skills-content .box:hover {
+    transform: translateY(-15px);
+    box-shadow: .3rem .3rem .7rem rgba(46, 41, 78, .15);
+}
+
+.skills .skills-content .box .icon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skills .skills-content .box .skills-icon {
+    height: 50px;
+    width: 25%;
+}
+
+.skills .skills-content .box p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 30px 0 10px;
+}
+
+.skills .skills-content .box p span {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 30px 0 10px;
+    color: #575757 ;
+}
+
+.skills .skills-content .box-1 {
+    margin-top: 100px;
+}
+
+.skills .skills-content .box-2 {
+    margin-top: 200px;
+}
+
+.skills .skills-content .box-3 {
+    margin-top: 300px;
+}
+
+/* Projects Section */
+
+.projects {
+    padding: 100px 15px 70px;
+    background-color: rgb(242, 242, 242);
+}
+
+.projects .section-title {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+
+.projects .section-title h1 {
+    font-size: 35px;
+    font-weight: 700;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+}
+
+.projects .section-title h1:before {
+    content: '';
+    left: 0px;
+    right: 25%;
+    height: 2px;
+    position: absolute;
+    background-color: black;
+    bottom: 0px;
+}
+
+.projects .section-title p {
+    display: block;
+}
+
+.projects .section-title p.small {
+    display: block;
+    font-size: 14px;
+    color: #838383;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.projects .projects-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.projects .projects-content .box {
+    background-color: white;
+    border: 2px solid white;
+    flex: 0 0 calc(33.33% - 15px);
+    max-width: calc(33.33% - 15px);
+    padding: 10px 10px 25px 10px;
+    border-radius: 7px;
+    box-shadow: 0.4rem 0.4rem 0.4rem rgba(46, 41, 78, .15);
+    transition: transform .3s;
+    text-align: center;
+    margin: 10px 0 20px;
+}
+
+.projects .projects-content .box:hover {
+    transform: translateY(-15px);
+    box-shadow: .3rem .3rem .7rem rgba(46, 41, 78, .15);
+}
+
+.projects .projects-content .box .description h3 {
+    margin: 20px 0 0;
+}
+
+.projects .projects-content .box p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 10px 0 10px;
+}
+
+.projects .projects-content .box .img-container {
+    width: 100%;
+    height: 200px;
+    background-color: blue;
+}
+
+.projects .projects-content .box .technologies {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: 15px auto 25px;
+    justify-content: space-evenly;
+}
+
+.projects .projects-content .box .technologies .technology {
+    background-color: rgb(70, 70, 70);
+    color: white;
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.projects .projects-content .box .img-container .projects-img {
+    height: 100%;
+    width: 100%;
+}
+
+.projects .projects-content .box .review {
+    display: flex;
+    justify-content: space-around;
+}
+
+.projects .projects-content .box .review .project-checkout {
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 8px;
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+}
+
+.projects .projects-content .box .review .project-checkout:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 0 0 0;
+}
+
+.contact .section-title {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contact .section-title h1 {
+    font-size: 35px;
+    font-weight: 700;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+}
+
+.contact .section-title h1:before {
+    content: '';
+    left: 25%;
+    right: 25%;
+    height: 2px;
+    position: absolute;
+    background-color: black;
+    bottom: 0px;
+}
+
+.contact .contact-content {
+    padding: 0 0 40px 0;
+    margin: auto;
+}
+
+.contact .contact-content p {
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+}
+
+.contact .contact-content .contact-box {
+    padding: 50px;
+    text-align: center;
+}
+
+
+.contact .contact-content .contact-box .contact-btn:first-child {
+    display: block;
+    margin-top: 0px;
+}
+
+.contact .contact-content .contact-box .contact-btn {
+    font-size: 20px;
+    border: 1px solid black;
+    background-color: transparent;
+    padding: 12px 28px;
+    text-decoration: none;
+    color: black;
+    border-radius: 4px;
+    transition: all .5s ease;
+    font-weight: 500;
+    display: block;
+    margin-top: 40px;
+}
+
+.contact .contact-content .contact-box .contact-btn:hover {
+    background-color: rgb(39, 39, 39);
+    color: white;
+}
+
+
+.contact .contact-content .icon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.contact .contact-content .contact-icon {
+    height: 50px;
+    margin: 15px;
+    transition: transform .3s;
+}
+
+.contact .contact-content .contact-icon:hover {
+    transform: translateY(-8px);
+}
+
+.contact .contact-content .contact-links p {
+    margin: 80px 0;
+}
+
+/* Footer Section */
+footer {
+    height: 100px;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.heart {
+    background-color: red;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin: 0 15px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    animation: heartbeat 1s infinite;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    position: absolute;
+}
+
+.heart:before {
+    top: -5px;
+    left: 0;
+}
+
+.heart:after {
+    left: 5px;
+    top: 0;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1) rotate(-45deg)
+    }
+
+    20% {
+        transform: scale(1.25) rotate(-45deg)
+    }
+
+    40% {
+        transform: scale(1.5) rotate(-45deg)
+    }
+}
+
+.ham-burger-menu .fa {
+    font-size: 30px;
+    height: 20px;
+    width: 35px;
+    line-height: 30px;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+
+/* Media Queries */
+
+@media(max-width: 1080px) {
+    .skills .skills-content .box {
+        flex: 0 0 30%;
+        max-width: 30%;
+        padding: 15px;
+        height: 360px;
+    }
+}
+
+@media(max-width: 991px) {
+    .home .home-content .block h1 {
+        font-size: 50px;
+    }
+    .skills .skills-content .box {
+        flex: 0 0 28%;
+        max-width: 28%;
+        padding: 15px;
+        height: 360px;
+    }
+
+    .skills .skills-content .box p {
+        font-size: 18px;
+    }
+
+    .skills .skills-content .box-1, .skills .skills-content .box-2, .skills .skills-content .box-3  {
+        margin: 40px auto;
+    }
+
+    .skills {
+        padding: 100px 15px 0px;
+    }
+
+    .about-me {
+        padding: 100px 15px 0px;
+    }
+
+    .projects .projects-content .box {
+        flex:0 0 40%;
+        max-width: 40%;
+    }
+}
+
+@media(max-width: 767px) {
+    .home .home-content .block h1 {
+        font-size: 45px;
+    }
+
+    .home .home-content .block h3 {
+        font-size: 20px;
+    }
+
+    .home .home-content .image-container .image-wrapper .my-image {
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        border: 2px solid black;
+    }
+    header {
+        padding: 15px;
+        position: fixed;
+        background-color: white;
+    }
+    .ham-burger-menu .fa {
+        display: inline-block;
+    }
+    .navbar {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 60px;
+        padding: 15px;
+        background-color: black;
+        display: none;
+    }
+
+    .navbar.show {
+        display: block;
+    }
+
+    header .navbar ul li {
+        display: block;
+        margin-left: 0;
+    }
+    header .navbar ul li a {
+        color: white;
+        line-height: 42px;
+    }
+    header .navbar ul li a::before {
+        background-color: white; 
+    }
+    .about-me .about-content .text .info .info-row {
+        flex: 0 0 calc(100% - 30px);
+        max-width: calc(100% - 30px);
+    }
+    .about-me .about-content .text p {
+        line-height: 21.5px; 
+    }
+
+    .skills .skills-content .box {
+        flex: 0 0 40%;
+        max-width: 40%;
+        padding: 15px;
+        height: 335px;
+    }
+
+    .skills .skills-content .box p {
+        font-size: 16px;
+    }
+
+    .skills .skills-content .box-1, .skills .skills-content .box-2, .skills .skills-content .box-3  {
+        margin: 40px auto;
+    }
+
+    .skills {
+        padding: 100px 15px 0px;
+    }
+
+    .about-me {
+        padding: 100px 15px 0px;
+    }
+
+    .projects .projects-content .box {
+        flex:0 0 calc(50% - 15px);
+        max-width: calc(50% - 15px);
+    }
+}
+
+@media(max-width: 520px) {
+
+    .home .home-content {
+        margin-top: 120px;
+        flex-direction: column;
+    }
+
+    .home .home-content .image-container {
+        order: 1;
+        height: max-content;
+        max-width: 100%;
+    }
+    
+    .home .home-content .block {
+        order: 2;
+        flex: 0;
+        max-width: 100%;
+    }
+
+    .about-me .about-content .img {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 30px;
+    }
+    
+    .about-me .about-content .text {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 30px;
+    }
+
+    .projects .projects-content .box {
+        flex:0 0 calc(90% - 15px);
+        max-width: calc(90% - 15px);
+        margin: 10px;
+    }
+
+    .skills .skills-content .box {
+        flex: 0 0 calc(90% - 10px);
+        max-width: 70%;
+        padding: 15px;
+        height: 360px;
+    }
+
+    .contact .contact-content .contact-box {
+        padding: 30px;
+    }
+
+
+}
