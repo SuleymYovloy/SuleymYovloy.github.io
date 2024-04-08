@@ -160,8 +160,6 @@ header .navbar ul li a.active::before {
 .home .home-content .image-container .image-wrapper .my-image {
     height: 300px;
     width: 300px;
-    border-radius: 50%;
-    border: 2px solid black;
 }
 
 .home .home-content .block h6 {
@@ -836,8 +834,6 @@ footer {
     .home .home-content .image-container .image-wrapper .my-image {
         height: 250px;
         width: 250px;
-        border-radius: 50%;
-        border: 2px solid black;
     }
     header {
         padding: 15px;
